@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mach-Swift. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Mach_Swift.
 FOUNDATION_EXPORT double Mach_SwiftVersionNumber;
