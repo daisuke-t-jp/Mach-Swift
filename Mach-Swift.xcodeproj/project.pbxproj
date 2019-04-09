@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CB1C93225C55B600FD0AF0 /* Mach_Swift_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CB1C89225C55B600FD0AF0 /* Mach_Swift_macOS.framework */; };
+		02CB1C93225C55B600FD0AF0 /* Mach_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CB1C89225C55B600FD0AF0 /* Mach_Swift.framework */; };
 		02CB1C98225C55B600FD0AF0 /* Mach_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */; };
 		02CB1C9A225C55B600FD0AF0 /* Mach_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02CB1CC5225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02CB1C89225C55B600FD0AF0 /* Mach_Swift_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mach_Swift_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02CB1C89225C55B600FD0AF0 /* Mach_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mach_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mach_Swift.h; sourceTree = "<group>"; };
 		02CB1C8D225C55B600FD0AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CB1C92225C55B600FD0AF0 /* Mach-SwiftTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mach-SwiftTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02CB1C93225C55B600FD0AF0 /* Mach_Swift_macOS.framework in Frameworks */,
+				02CB1C93225C55B600FD0AF0 /* Mach_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		02CB1C8A225C55B600FD0AF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02CB1C89225C55B600FD0AF0 /* Mach_Swift_macOS.framework */,
+				02CB1C89225C55B600FD0AF0 /* Mach_Swift.framework */,
 				02CB1C92225C55B600FD0AF0 /* Mach-SwiftTests-macOS.xctest */,
 			);
 			name = Products;
@@ -184,7 +184,7 @@
 			);
 			name = "Mach-Swift-macOS";
 			productName = "Mach-Swift";
-			productReference = 02CB1C89225C55B600FD0AF0 /* Mach_Swift_macOS.framework */;
+			productReference = 02CB1C89225C55B600FD0AF0 /* Mach_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		02CB1C91225C55B600FD0AF0 /* Mach-SwiftTests-macOS */ = {
@@ -441,7 +441,7 @@
 		02CB1C9E225C55B600FD0AF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -458,7 +458,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mach-Swift.Mach-Swift";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Mach_Swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -468,7 +468,7 @@
 		02CB1C9F225C55B600FD0AF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -485,7 +485,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mach-Swift.Mach-Swift";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Mach_Swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
