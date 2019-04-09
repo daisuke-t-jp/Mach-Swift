@@ -1,6 +1,5 @@
 included:
-    - Baconian
-    - tester
+    - Mach-Swift
 disabled_rules:
     - file_length
     - trailing_comma
