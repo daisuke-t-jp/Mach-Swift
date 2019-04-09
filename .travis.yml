@@ -1,0 +1,13 @@
+branches:
+  only: 
+    - master
+
+matrix:
+  include:
+    - os: osx
+      language: swift
+      osx_image: xcode10.2
+      script:
+        # macOS
+        - xcodebuild clean -project "Mach-Swift.xcodeproj" 
+        - xcodebuild test -project "Mach-Swift.xcodeproj" -scheme "Mach-Swift-macOS" -destination "platform=OS X" -configuration Debug
