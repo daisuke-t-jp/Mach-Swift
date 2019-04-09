@@ -11,3 +11,7 @@ matrix:
         # macOS
         - xcodebuild clean -project "Mach-Swift.xcodeproj" 
         - xcodebuild test -project "Mach-Swift.xcodeproj" -scheme "Mach-Swift-macOS" -destination "platform=OS X" -configuration Debug
+
+        # iOS
+        - xcodebuild clean -project "Mach-Swift.xcodeproj" 
+        - xcodebuild test -project "Mach-Swift.xcodeproj" -scheme "Mach-Swift-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
