@@ -10,6 +10,18 @@
 		02CB1C93225C55B600FD0AF0 /* Mach_Swift_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CB1C89225C55B600FD0AF0 /* Mach_Swift_macOS.framework */; };
 		02CB1C98225C55B600FD0AF0 /* Mach_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */; };
 		02CB1C9A225C55B600FD0AF0 /* Mach_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02CB1CC5225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */; };
+		02CB1CC6225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */; };
+		02CB1CC7225C5ECB00FD0AF0 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBB225C5ECB00FD0AF0 /* MachHostVMStatics.swift */; };
+		02CB1CC8225C5ECB00FD0AF0 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */; };
+		02CB1CC9225C5ECB00FD0AF0 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */; };
+		02CB1CCA225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */; };
+		02CB1CCB225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */; };
+		02CB1CCC225C5ECB00FD0AF0 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */; };
+		02CB1CCD225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */; };
+		02CB1CCE225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */; };
+		02ECFC5C225C7D6000E7046D /* MachHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5B225C7D6000E7046D /* MachHost.swift */; };
+		02ECFC5E225C7DE900E7046D /* MachTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5D225C7DE900E7046D /* MachTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,18 @@
 		02CB1C92225C55B600FD0AF0 /* Mach-SwiftTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mach-SwiftTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach_SwiftTests.swift; sourceTree = "<group>"; };
 		02CB1C99225C55B600FD0AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
+		02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
+		02CB1CBB225C5ECB00FD0AF0 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
+		02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
+		02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
+		02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
+		02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
+		02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
+		02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Mach-Swift.swift"; sourceTree = "<group>"; };
+		02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Mach-Swift.swift"; sourceTree = "<group>"; };
+		02ECFC5B225C7D6000E7046D /* MachHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHost.swift; sourceTree = "<group>"; };
+		02ECFC5D225C7DE900E7046D /* MachTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +97,8 @@
 			children = (
 				02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */,
 				02CB1C8D225C55B600FD0AF0 /* Info.plist */,
+				02CB1CC2225C5ECB00FD0AF0 /* Extension */,
+				02CB1CB7225C5ECB00FD0AF0 /* Mach */,
 			);
 			path = "Mach-Swift";
 			sourceTree = "<group>";
@@ -84,6 +110,48 @@
 				02CB1C99225C55B600FD0AF0 /* Info.plist */,
 			);
 			path = "Mach-SwiftTests";
+			sourceTree = "<group>";
+		};
+		02CB1CB7225C5ECB00FD0AF0 /* Mach */ = {
+			isa = PBXGroup;
+			children = (
+				02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */,
+				02CB1CB8225C5ECB00FD0AF0 /* Host */,
+				02CB1CBE225C5ECB00FD0AF0 /* Task */,
+				02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */,
+			);
+			path = Mach;
+			sourceTree = "<group>";
+		};
+		02CB1CB8225C5ECB00FD0AF0 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				02ECFC5B225C7D6000E7046D /* MachHost.swift */,
+				02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */,
+				02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */,
+				02CB1CBB225C5ECB00FD0AF0 /* MachHostVMStatics.swift */,
+				02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		02CB1CBE225C5ECB00FD0AF0 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				02ECFC5D225C7DE900E7046D /* MachTask.swift */,
+				02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */,
+				02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		02CB1CC2225C5ECB00FD0AF0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */,
+				02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +283,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CB1CCE225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift in Sources */,
+				02ECFC5E225C7DE900E7046D /* MachTask.swift in Sources */,
+				02CB1CCC225C5ECB00FD0AF0 /* MachCPUTick.swift in Sources */,
+				02CB1CC9225C5ECB00FD0AF0 /* Mach.swift in Sources */,
+				02CB1CCB225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift in Sources */,
+				02CB1CC5225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift in Sources */,
+				02CB1CCD225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift in Sources */,
+				02CB1CCA225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift in Sources */,
+				02ECFC5C225C7D6000E7046D /* MachHost.swift in Sources */,
+				02CB1CC6225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift in Sources */,
+				02CB1CC7225C5ECB00FD0AF0 /* MachHostVMStatics.swift in Sources */,
+				02CB1CC8225C5ECB00FD0AF0 /* MachHostBasicInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +495,7 @@
 		02CB1CA1225C55B600FD0AF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mach-SwiftTests/Info.plist";
@@ -432,6 +513,7 @@
 		02CB1CA2225C55B600FD0AF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mach-SwiftTests/Info.plist";
