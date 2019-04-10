@@ -45,7 +45,7 @@ extension Mach.Host {
 		let port = mach_host_self()
 		var pageSize = vm_size_t()
 		guard host_page_size(port, &pageSize) == KERN_SUCCESS else {
-			return VMStatics()
+			return VMStatistics()
 		}
 		
 		
