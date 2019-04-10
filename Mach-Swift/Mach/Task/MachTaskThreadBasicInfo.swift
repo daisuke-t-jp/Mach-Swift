@@ -113,7 +113,7 @@ extension Mach.Task {
 		}
 		
 		if threadBasicInfo.flags.contains(ThreadFlag.globalForcedIdle) {
-			return true
+			return true 
 		}
 		
 		return false
