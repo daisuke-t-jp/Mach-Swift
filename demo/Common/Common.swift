@@ -14,19 +14,19 @@ public class Common {
 		do {
 			print("# Host")
 
-			print("- freeSize: \(vm.freeSize)")
-			print("- activeSize: \(vm.activeSize)")
-			print("- inactiveSize: \(vm.inactiveSize)")
-			print("- wireSize: \(vm.wireSize)")
 			let vm = Mach.Host.vmStatistics()
 			print("## VMStatistics")
+			print("- freeSize: \(vm.freeSize)")			// byte size of free
+			print("- activeSize: \(vm.activeSize)")		// byte size of active
+			print("- inactiveSize: \(vm.inactiveSize)")	// byte size of inactive
+			print("- wireSize: \(vm.wireSize)")			// byte size of wire
 			print("\n")
 
 			let basicInfo = Mach.Host.basicInfo()
 			print("## BasicInfo")
 			print("- maxCPUs: \(basicInfo.maxCPUs)")
 			print("- availCPUs: \(basicInfo.availCPUs)")
-			print("- memorySize: \(basicInfo.memorySize)")
+			print("- memorySize: \(basicInfo.memorySize)")	// byte size
 			print("- cpuType: \(basicInfo.cpuType)")
 			print("- cpuSubType: \(basicInfo.cpuSubType)")
 			print("- cpuThreadType: \(basicInfo.cpuThreadType)")
@@ -34,7 +34,7 @@ public class Common {
 			print("- physicalCPUMax: \(basicInfo.physicalCPUMax)")
 			print("- logicalCPU: \(basicInfo.logicalCPU)")
 			print("- logicalCPUMax: \(basicInfo.logicalCPUMax)")
-			print("- maxMem: \(basicInfo.maxMem)")
+			print("- maxMem: \(basicInfo.maxMem)")	// byte size
 			print("\n")
 
 			let cpuLoadInfo = Mach.Host.cpuLoadInfo()

@@ -14,7 +14,7 @@ extension Mach.Host {
 	public struct BasicInfo {
 		public let maxCPUs: Int
 		public let availCPUs: Int
-		public let memorySize: UInt32
+		public let memorySize: UInt32	/// byte size
 		public let cpuType: Int
 		public let cpuSubType: Int
 		public let cpuThreadType: Int
@@ -22,7 +22,7 @@ extension Mach.Host {
 		public let physicalCPUMax: Int
 		public let logicalCPU: Int
 		public let logicalCPUMax: Int
-		public let maxMem: UInt64
+		public let maxMem: UInt64		/// byte size
 	}
 	
 }
@@ -53,7 +53,7 @@ extension Mach.Host {
 	/// The function return host's basic info.
 	/// This is wrapping the following function.
 	///
-	/// - host_statistics(*, HOST_BASIC_INFO, *, *)
+	/// - host_statistics(, HOST_BASIC_INFO, , )
 	///
 	/// - Returns: Host's basic info.
 	public static func basicInfo() -> BasicInfo {

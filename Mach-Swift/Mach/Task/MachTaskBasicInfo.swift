@@ -12,9 +12,9 @@ extension Mach.Task {
 	
 	/// Task's basic info.
 	public struct BasicInfo {
-		public let virtualSize: UInt64
-		public let residentSize: UInt64
-		public let residentSizeMax: UInt64
+		public let virtualSize: UInt64		/// byte size
+		public let residentSize: UInt64		/// byte size
+		public let residentSizeMax: UInt64	/// byte size
 		public let userTime: TimeInterval
 		public let systemTime: TimeInterval
 		public let policy: Int

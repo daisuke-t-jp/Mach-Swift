@@ -11,11 +11,11 @@ import Foundation
 extension Mach.Host {
 	
 	/// Host's virtual memory statistics.
-		public let freeSize: UInt64
-		public let activeSize: UInt64
-		public let inactiveSize: UInt64
-		public let wireSize: UInt64
 	public struct VMStatistics {
+		public let freeSize: UInt64			/// byte size of free.
+		public let activeSize: UInt64		/// byte size of active.
+		public let inactiveSize: UInt64		/// byte size of inactive.
+		public let wireSize: UInt64			/// byte size of wire.
 	}
 	
 }
@@ -38,7 +38,7 @@ extension Mach.Host {
 	/// The function return host's virtual memory statistics.
 	/// This is wrapping the following function.
 	///
-	/// - host_statistics(*, HOST_VM_INFO, *, *)
+	/// - host_statistics(, HOST_VM_INFO, , )
 	/// 
 	/// - Returns: Host's virtual memory statistics.
 	public static func vmStatistics() -> VMStatistics {
