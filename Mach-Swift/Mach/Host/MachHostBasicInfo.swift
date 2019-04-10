@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach.Host {
 	
-	struct BasicInfo {
+	public struct BasicInfo {
 		let maxCPUs: Int
 		let availCPUs: Int
 		let memorySize: UInt32
@@ -29,7 +29,7 @@ extension Mach.Host {
 
 extension Mach.Host.BasicInfo {
 	
-	init() {
+	public init() {
 		maxCPUs = 0
 		availCPUs = 0
 		memorySize = 0
@@ -49,7 +49,7 @@ extension Mach.Host.BasicInfo {
 
 extension Mach.Host {
 
-	static func basicInfo() -> BasicInfo {
+	public static func basicInfo() -> BasicInfo {
 		
 		var machData = host_basic_info()
 		var count = mach_msg_type_number_t(MemoryLayout<host_basic_info>.stride / MemoryLayout<integer_t>.stride)

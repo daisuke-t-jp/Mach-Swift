@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach {
 
-	struct CPUTick {
+	public struct CPUTick {
 		let userTick: UInt32
 		let systemTick: UInt32
 		let idleTick: UInt32
@@ -21,7 +21,7 @@ extension Mach {
 
 extension Mach.CPUTick {
 
-	init() {
+	public init() {
 		userTick = 0
 		systemTick = 0
 		idleTick = 0

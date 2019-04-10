@@ -8,6 +8,6 @@
 
 import Foundation
 
-final class Mach {
+public class Mach {
 	
 }

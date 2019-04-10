@@ -10,8 +10,7 @@ import Foundation
 
 extension Mach.Host {
 	
-	static func processorInfo() -> [Mach.CPUTick] {
-		
+	public static func processorInfo() -> [Mach.CPUTick] {
 		var cpuCount: natural_t = 0
 		var cpuInfoArray: processor_info_array_t?
 		var cpuInfoCount: mach_msg_type_number_t = 0

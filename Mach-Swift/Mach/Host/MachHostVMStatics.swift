@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach.Host {
 	
-	struct VMStatics {
+	public struct VMStatics {
 		let freeSize: UInt64
 		let activeSize: UInt64
 		let inactiveSize: UInt64
@@ -22,7 +22,7 @@ extension Mach.Host {
 
 extension Mach.Host.VMStatics {
 	
-	init() {
+	public init() {
 		freeSize = 0
 		activeSize = 0
 		inactiveSize = 0
@@ -34,7 +34,7 @@ extension Mach.Host.VMStatics {
 
 extension Mach.Host {
 
-	static func vmStatics() -> VMStatics {
+	public static func vmStatics() -> VMStatics {
 		let port = mach_host_self()
 		var pageSize = vm_size_t()
 		guard host_page_size(port, &pageSize) == KERN_SUCCESS else {

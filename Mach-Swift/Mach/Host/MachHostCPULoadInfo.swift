@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach.Host {
 	
-	static func cpuLoadInfo() -> Mach.CPUTick {
+	public static func cpuLoadInfo() -> Mach.CPUTick {
 		var machData = host_cpu_load_info()
 		var count = mach_msg_type_number_t(MemoryLayout<host_cpu_load_info>.stride / MemoryLayout<integer_t>.stride)
 		

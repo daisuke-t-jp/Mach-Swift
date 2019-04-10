@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach {
 	
-	final class Host {
+	public class Host {
 		
 	}
 	

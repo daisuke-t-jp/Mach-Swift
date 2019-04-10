@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach.Task {
 	
-	struct BasicInfo {
+	public struct BasicInfo {
 		let virtualSize: UInt64
 		let residentSize: UInt64
 		let residentSizeMax: UInt64
@@ -25,7 +25,7 @@ extension Mach.Task {
 
 extension Mach.Task.BasicInfo {
 	
-	init() {
+	public init() {
 		virtualSize = 0
 		residentSize = 0
 		residentSizeMax = 0
@@ -39,7 +39,7 @@ extension Mach.Task.BasicInfo {
 
 
 extension Mach.Task {
-	static func basicInfo() -> BasicInfo {
+	public static func basicInfo() -> BasicInfo {
 		var machData = mach_task_basic_info()
 		var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.stride / MemoryLayout<integer_t>.stride)
 		
