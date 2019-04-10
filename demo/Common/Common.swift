@@ -14,12 +14,12 @@ public class Common {
 		do {
 			print("# Host")
 
-			let vm = Mach.Host.vmStatics()
-			print("## VMStatics")
 			print("- freeSize: \(vm.freeSize)")
 			print("- activeSize: \(vm.activeSize)")
 			print("- inactiveSize: \(vm.inactiveSize)")
 			print("- wireSize: \(vm.wireSize)")
+			let vm = Mach.Host.vmStatistics()
+			print("## VMStatistics")
 			print("\n")
 
 			let basicInfo = Mach.Host.basicInfo()

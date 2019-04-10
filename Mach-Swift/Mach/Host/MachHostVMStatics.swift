@@ -1,5 +1,5 @@
 //
-//  MachHostVMStatics.swift
+//  MachHostVMStatistics.swift
 //  Mach-Swift
 //
 //  Created by Daisuke T on 2019/03/14.
@@ -11,17 +11,17 @@ import Foundation
 extension Mach.Host {
 	
 	/// Host's virtual memory statistics.
-	public struct VMStatics {
 		public let freeSize: UInt64
 		public let activeSize: UInt64
 		public let inactiveSize: UInt64
 		public let wireSize: UInt64
+	public struct VMStatistics {
 	}
 	
 }
 
 
-extension Mach.Host.VMStatics {
+extension Mach.Host.VMStatistics {
 	
 	public init() {
 		freeSize = 0
@@ -41,7 +41,7 @@ extension Mach.Host {
 	/// - host_statistics(*, HOST_VM_INFO, *, *)
 	/// 
 	/// - Returns: Host's virtual memory statistics.
-	public static func vmStatics() -> VMStatics {
+	public static func vmStatistics() -> VMStatistics {
 		let port = mach_host_self()
 		var pageSize = vm_size_t()
 		guard host_page_size(port, &pageSize) == KERN_SUCCESS else {
@@ -59,12 +59,12 @@ extension Mach.Host {
 		}
 		
 		guard machRes == KERN_SUCCESS else {
-			return VMStatics()
+			return VMStatistics()
 		}
 		
 		
 		let pageSize2 = UInt64(pageSize)
-		let res = VMStatics(
+		let res = VMStatistics(
 			freeSize: UInt64(machData.free_count) * pageSize2,
 			activeSize: UInt64(machData.active_count) * pageSize2,
 			inactiveSize: UInt64(machData.inactive_count) * pageSize2,
