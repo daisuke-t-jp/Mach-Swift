@@ -10,6 +10,7 @@ import Foundation
 
 extension Mach.Host {
 	
+	/// Host's basic info.
 	public struct BasicInfo {
 		public let maxCPUs: Int
 		public let availCPUs: Int
@@ -49,6 +50,12 @@ extension Mach.Host.BasicInfo {
 
 extension Mach.Host {
 
+	/// The function return host's basic info.
+	/// This is wrapping the following function.
+	///
+	/// - host_statistics(*, HOST_BASIC_INFO, *, *)
+	///
+	/// - Returns: Host's basic info.
 	public static func basicInfo() -> BasicInfo {
 		
 		var machData = host_basic_info()

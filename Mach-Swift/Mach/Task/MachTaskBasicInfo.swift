@@ -10,6 +10,7 @@ import Foundation
 
 extension Mach.Task {
 	
+	/// Task's basic info.
 	public struct BasicInfo {
 		public let virtualSize: UInt64
 		public let residentSize: UInt64
@@ -39,6 +40,13 @@ extension Mach.Task.BasicInfo {
 
 
 extension Mach.Task {
+	
+	/// The function return task's basic info.
+	/// This is wrapping the following function.
+	///
+	/// - task_info()
+	///
+	/// - Returns: Task's basic info.
 	public static func basicInfo() -> BasicInfo {
 		var machData = mach_task_basic_info()
 		var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.stride / MemoryLayout<integer_t>.stride)

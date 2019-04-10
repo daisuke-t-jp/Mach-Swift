@@ -10,6 +10,12 @@ import Foundation
 
 extension Mach.Host {
 	
+	/// The function return host's cpu load info.
+	/// This is wrapping the following function.
+	///
+	/// - host_statistics(*, HOST_CPU_LOAD_INFO, *, *)
+	///
+	/// - Returns: Host's cpu load info.
 	public static func cpuLoadInfo() -> Mach.CPUTick {
 		var machData = host_cpu_load_info()
 		var count = mach_msg_type_number_t(MemoryLayout<host_cpu_load_info>.stride / MemoryLayout<integer_t>.stride)

@@ -28,6 +28,7 @@ extension Mach.Task {
 		}
 	}
 	
+	/// Task's thread basic info.
 	public struct ThreadBasicInfo {
 		public let userTime: TimeInterval		// user run time
 		public let systemTime: TimeInterval		// system run time
@@ -59,7 +60,14 @@ extension Mach.Task.ThreadBasicInfo {
 
 
 extension Mach.Task {
-
+	
+	/// The function return an array of task's thread basic info.
+	/// This is wrapping the following function.
+	///
+	/// - task_threads()
+	/// - thread_basic_info()
+	///
+	/// - Returns: An array of task's thread basic info.
 	public static func threadBasicInfo() -> [ThreadBasicInfo] {
 		var actList: thread_act_array_t?
 		var actListCount: mach_msg_type_number_t = 0

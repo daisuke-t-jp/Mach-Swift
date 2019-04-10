@@ -9,7 +9,7 @@
 import Foundation
 
 extension Mach {
-
+	
 	public struct CPUTick {
 		public let userTick: UInt32
 		public let systemTick: UInt32

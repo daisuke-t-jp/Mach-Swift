@@ -10,6 +10,7 @@ import Foundation
 
 extension Mach.Host {
 	
+	/// Host's virtual memory statistics.
 	public struct VMStatics {
 		public let freeSize: UInt64
 		public let activeSize: UInt64
@@ -34,6 +35,12 @@ extension Mach.Host.VMStatics {
 
 extension Mach.Host {
 
+	/// The function return host's virtual memory statistics.
+	/// This is wrapping the following function.
+	///
+	/// - host_statistics(*, HOST_VM_INFO, *, *)
+	/// 
+	/// - Returns: Host's virtual memory statistics.
 	public static func vmStatics() -> VMStatics {
 		let port = mach_host_self()
 		var pageSize = vm_size_t()
