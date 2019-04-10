@@ -19,13 +19,11 @@
 		02CB1CCB225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */; };
 		02CB1CCC225C5ECB00FD0AF0 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */; };
 		02CB1CCD225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */; };
-		02CB1CCE225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */; };
 		02ECFC5C225C7D6000E7046D /* MachHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5B225C7D6000E7046D /* MachHost.swift */; };
 		02ECFC5E225C7DE900E7046D /* MachTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5D225C7DE900E7046D /* MachTask.swift */; };
 		02ECFC6D225C823800E7046D /* Mach_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ECFC64225C823800E7046D /* Mach_Swift.framework */; };
 		02ECFC7C225C842100E7046D /* Mach_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02ECFC7D225C842800E7046D /* TimeInterval+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */; };
-		02ECFC7E225C842B00E7046D /* FixedWidthInteger+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */; };
 		02ECFC7F225C843200E7046D /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */; };
 		02ECFC80225C843500E7046D /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */; };
 		02ECFC81225C843800E7046D /* MachHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5B225C7D6000E7046D /* MachHost.swift */; };
@@ -72,7 +70,6 @@
 		02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
 		02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
 		02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Mach-Swift.swift"; sourceTree = "<group>"; };
-		02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Mach-Swift.swift"; sourceTree = "<group>"; };
 		02ECFC5B225C7D6000E7046D /* MachHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHost.swift; sourceTree = "<group>"; };
 		02ECFC5D225C7DE900E7046D /* MachTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTask.swift; sourceTree = "<group>"; };
 		02ECFC64225C823800E7046D /* Mach_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mach_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */,
-				02CB1CC4225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -408,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02CB1CCE225C5ECB00FD0AF0 /* FixedWidthInteger+Mach-Swift.swift in Sources */,
 				02ECFC5E225C7DE900E7046D /* MachTask.swift in Sources */,
 				02CB1CCC225C5ECB00FD0AF0 /* MachCPUTick.swift in Sources */,
 				02CB1CC9225C5ECB00FD0AF0 /* Mach.swift in Sources */,
@@ -442,7 +437,6 @@
 				02ECFC87225C844F00E7046D /* MachTaskBasicInfo.swift in Sources */,
 				02ECFC7F225C843200E7046D /* Mach.swift in Sources */,
 				02ECFC7D225C842800E7046D /* TimeInterval+Mach-Swift.swift in Sources */,
-				02ECFC7E225C842B00E7046D /* FixedWidthInteger+Mach-Swift.swift in Sources */,
 				02ECFC83225C843E00E7046D /* MachHostCPULoadInfo.swift in Sources */,
 				02ECFC82225C843B00E7046D /* MachHostProcessorInfo.swift in Sources */,
 				02ECFC84225C844000E7046D /* MachHostVMStatics.swift in Sources */,
