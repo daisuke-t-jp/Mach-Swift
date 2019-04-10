@@ -3,11 +3,11 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "Mach-Swift"
   spec.version      = "1.0.0"
-  spec.summary      = "Mach framework in Swift."
+  spec.summary      = "You can easily get information from Mach."
 
   spec.description  = <<-DESC
-                   Mach framework in Swift.
-                   This framework wrapped Mach functions.
+                   You can easily get information from Mach.
+                   This framework wrapped Mach functions in Swift.
                    DESC
 
   spec.homepage     = "https://github.com/daisuke-t-jp/Mach-Swift"
