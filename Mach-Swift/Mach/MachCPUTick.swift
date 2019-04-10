@@ -11,10 +11,10 @@ import Foundation
 extension Mach {
 
 	public struct CPUTick {
-		let userTick: UInt32
-		let systemTick: UInt32
-		let idleTick: UInt32
-		let niceTick: UInt32
+		public let userTick: UInt32
+		public let systemTick: UInt32
+		public let idleTick: UInt32
+		public let niceTick: UInt32
 	}
 	
 }

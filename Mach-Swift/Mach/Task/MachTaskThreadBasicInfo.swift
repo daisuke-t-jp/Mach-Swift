@@ -17,22 +17,26 @@ extension Mach.Task {
 	public static let ThreadStateUninterruptible = TH_STATE_UNINTERRUPTIBLE	// thread is in an uninterruptible wait
 	public static let ThreadStateHalted = TH_STATE_HALTED		// thread is halted at a clean point
 	
-	struct ThreadFlag: OptionSet {
-		let rawValue: Int32
-		static let swapped = ThreadFlag(rawValue: TH_FLAGS_SWAPPED)	// thread is swapped out
-		static let idle = ThreadFlag(rawValue: TH_FLAGS_IDLE)		// thread is an idle thread
-		static let globalForcedIdle = ThreadFlag(rawValue: TH_FLAGS_GLOBAL_FORCED_IDLE)	// thread performs global forced idle
+	public struct ThreadFlag: OptionSet {
+		public let rawValue: Int32
+		public static let swapped = ThreadFlag(rawValue: TH_FLAGS_SWAPPED)	// thread is swapped out
+		public static let idle = ThreadFlag(rawValue: TH_FLAGS_IDLE)		// thread is an idle thread
+		public static let globalForcedIdle = ThreadFlag(rawValue: TH_FLAGS_GLOBAL_FORCED_IDLE)	// thread performs global forced idle
+		
+		public init(rawValue: Int32) {
+			self.rawValue = rawValue
+		}
 	}
 	
 	public struct ThreadBasicInfo {
-		let userTime: TimeInterval		// user run time
-		let systemTime: TimeInterval	// system run time
-		let cpuUsage: Int				// scaled cpu usage percentage
-		let policy: Int					// scheduling policy in effect
-		let runState: ThreadState		// run state
-		let flags: ThreadFlag			// various flags
-		let suspendCount: Int			// suspend count for thread
-		let sleepTime: TimeInterval		// number of seconds that thread has been sleeping
+		public let userTime: TimeInterval		// user run time
+		public let systemTime: TimeInterval		// system run time
+		public let cpuUsage: Int				// scaled cpu usage percentage
+		public let policy: Int					// scheduling policy in effect
+		public let runState: ThreadState		// run state
+		public let flags: ThreadFlag			// various flags
+		public let suspendCount: Int			// suspend count for thread
+		public let sleepTime: TimeInterval		// number of seconds that thread has been sleeping
 	}
 	
 }
@@ -107,7 +111,7 @@ extension Mach.Task {
 		}
 	}
 	
-	static func threadBasicInfoIsIdle(_ threadBasicInfo: ThreadBasicInfo) -> Bool {
+	public static func threadBasicInfoIsIdle(_ threadBasicInfo: ThreadBasicInfo) -> Bool {
 		if threadBasicInfo.flags.contains(ThreadFlag.idle) {
 			return true
 		}

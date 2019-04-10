@@ -11,10 +11,10 @@ import Foundation
 extension Mach.Host {
 	
 	public struct VMStatics {
-		let freeSize: UInt64
-		let activeSize: UInt64
-		let inactiveSize: UInt64
-		let wireSize: UInt64
+		public let freeSize: UInt64
+		public let activeSize: UInt64
+		public let inactiveSize: UInt64
+		public let wireSize: UInt64
 	}
 	
 }

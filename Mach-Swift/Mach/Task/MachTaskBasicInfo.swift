@@ -11,13 +11,13 @@ import Foundation
 extension Mach.Task {
 	
 	public struct BasicInfo {
-		let virtualSize: UInt64
-		let residentSize: UInt64
-		let residentSizeMax: UInt64
-		let userTime: TimeInterval
-		let systemTime: TimeInterval
-		let policy: Int
-		let suspendCount: Int
+		public let virtualSize: UInt64
+		public let residentSize: UInt64
+		public let residentSizeMax: UInt64
+		public let userTime: TimeInterval
+		public let systemTime: TimeInterval
+		public let policy: Int
+		public let suspendCount: Int
 	}
 	
 }

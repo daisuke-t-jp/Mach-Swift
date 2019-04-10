@@ -11,17 +11,17 @@ import Foundation
 extension Mach.Host {
 	
 	public struct BasicInfo {
-		let maxCPUs: Int
-		let availCPUs: Int
-		let memorySize: UInt32
-		let cpuType: Int
-		let cpuSubType: Int
-		let cpuThreadType: Int
-		let physicalCPU: Int
-		let physicalCPUMax: Int
-		let logicalCPU: Int
-		let logicalCPUMax: Int
-		let maxMem: UInt64
+		public let maxCPUs: Int
+		public let availCPUs: Int
+		public let memorySize: UInt32
+		public let cpuType: Int
+		public let cpuSubType: Int
+		public let cpuThreadType: Int
+		public let physicalCPU: Int
+		public let physicalCPUMax: Int
+		public let logicalCPU: Int
+		public let logicalCPUMax: Int
+		public let maxMem: UInt64
 	}
 	
 }
