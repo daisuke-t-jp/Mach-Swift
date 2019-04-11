@@ -73,17 +73,19 @@ class Mach_SwiftTests: XCTestCase {
 	}
 	
 	
-	// MARK: - Mach.Task
-	func testMachTaskBasicInfo() {
-		let val = Mach.Task.basicInfo()
+	// MARK: - Mach.Task.Info
+	func testMachTaskInfoBasicInfo() {
+		let val = Mach.Task.Info.basicInfo()
 		
 		XCTAssertFalse(val.virtualSize == 0 &&
 			val.residentSize == 0 &&
 			val.residentSizeMax == 0)
 	}
 	
+	
+	// MARK: - Mach.Task.Thread
 	func testMachTaskThreadBasicInfo() {
-		let array = Mach.Task.threadBasicInfo()
+		let array = Mach.Task.Thread.basicInfoArray()
 		
 		XCTAssertNotEqual(array.count, 0)
 	}

@@ -1,5 +1,5 @@
 //
-//  MachTaskBasicInfo.swift
+//  MachTaskInfoBasicInfo.swift
 //  Mach-Swift
 //
 //  Created by Daisuke T on 2019/03/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Mach.Task {
+extension Mach.Task.Info {
 	
 	/// Task's basic info.
 	public struct BasicInfo {
@@ -24,7 +24,7 @@ extension Mach.Task {
 }
 
 
-extension Mach.Task.BasicInfo {
+extension Mach.Task.Info.BasicInfo {
 	
 	public init() {
 		virtualSize = 0
@@ -39,7 +39,7 @@ extension Mach.Task.BasicInfo {
 }
 
 
-extension Mach.Task {
+extension Mach.Task.Info {
 	
 	/// The function return task's basic info.
 	/// This is wrapping the following function.

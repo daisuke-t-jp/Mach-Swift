@@ -11,8 +11,6 @@
 		02CB1C98225C55B600FD0AF0 /* Mach_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */; };
 		02CB1C9A225C55B600FD0AF0 /* Mach_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02CB1CC9225C5ECB00FD0AF0 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */; };
-		02CB1CCA225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */; };
-		02CB1CCB225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */; };
 		02CB1CCC225C5ECB00FD0AF0 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */; };
 		02CB1CCD225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */; };
 		02ECFC5C225C7D6000E7046D /* MachHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5B225C7D6000E7046D /* MachHost.swift */; };
@@ -24,8 +22,6 @@
 		02ECFC80225C843500E7046D /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */; };
 		02ECFC81225C843800E7046D /* MachHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5B225C7D6000E7046D /* MachHost.swift */; };
 		02ECFC86225C844B00E7046D /* MachTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5D225C7DE900E7046D /* MachTask.swift */; };
-		02ECFC87225C844F00E7046D /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */; };
-		02ECFC88225C845200E7046D /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */; };
 		02ECFC89225C845600E7046D /* Mach_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */; };
 		7EA5BC2D225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC2C225F583600D05F6A /* MachHostStatisticsVMInfo.swift */; };
 		7EA5BC2E225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC2C225F583600D05F6A /* MachHostStatisticsVMInfo.swift */; };
@@ -41,6 +37,14 @@
 		7EA5BC3F225F67FA00D05F6A /* MachHostProcessorCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC3D225F67FA00D05F6A /* MachHostProcessorCPULoadInfo.swift */; };
 		7EA5BC41225F682300D05F6A /* MachHostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC40225F682300D05F6A /* MachHostProcessor.swift */; };
 		7EA5BC42225F682300D05F6A /* MachHostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC40225F682300D05F6A /* MachHostProcessor.swift */; };
+		7EA5BC45225F692700D05F6A /* MachTaskInfoBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC44225F692700D05F6A /* MachTaskInfoBasicInfo.swift */; };
+		7EA5BC46225F692700D05F6A /* MachTaskInfoBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC44225F692700D05F6A /* MachTaskInfoBasicInfo.swift */; };
+		7EA5BC48225F693900D05F6A /* MachTaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC47225F693900D05F6A /* MachTaskInfo.swift */; };
+		7EA5BC49225F693900D05F6A /* MachTaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC47225F693900D05F6A /* MachTaskInfo.swift */; };
+		7EA5BC4C225F69C500D05F6A /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC4B225F69C500D05F6A /* MachTaskThreadBasicInfo.swift */; };
+		7EA5BC4D225F69C500D05F6A /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC4B225F69C500D05F6A /* MachTaskThreadBasicInfo.swift */; };
+		7EA5BC4F225F69D800D05F6A /* MachTaskThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC4E225F69D800D05F6A /* MachTaskThread.swift */; };
+		7EA5BC50225F69D800D05F6A /* MachTaskThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC4E225F69D800D05F6A /* MachTaskThread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +72,6 @@
 		02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach_SwiftTests.swift; sourceTree = "<group>"; };
 		02CB1C99225C55B600FD0AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
-		02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
-		02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
 		02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
 		02CB1CC3225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Mach-Swift.swift"; sourceTree = "<group>"; };
 		02ECFC5B225C7D6000E7046D /* MachHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHost.swift; sourceTree = "<group>"; };
@@ -83,6 +85,10 @@
 		7EA5BC39225F671900D05F6A /* MachHostInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHostInfo.swift; sourceTree = "<group>"; };
 		7EA5BC3D225F67FA00D05F6A /* MachHostProcessorCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorCPULoadInfo.swift; sourceTree = "<group>"; };
 		7EA5BC40225F682300D05F6A /* MachHostProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHostProcessor.swift; sourceTree = "<group>"; };
+		7EA5BC44225F692700D05F6A /* MachTaskInfoBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskInfoBasicInfo.swift; sourceTree = "<group>"; };
+		7EA5BC47225F693900D05F6A /* MachTaskInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachTaskInfo.swift; sourceTree = "<group>"; };
+		7EA5BC4B225F69C500D05F6A /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
+		7EA5BC4E225F69D800D05F6A /* MachTaskThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachTaskThread.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				02ECFC5D225C7DE900E7046D /* MachTask.swift */,
-				02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */,
-				02CB1CC0225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift */,
+				7EA5BC43225F692700D05F6A /* Info */,
+				7EA5BC4A225F69C500D05F6A /* Thread */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -225,6 +231,24 @@
 				7EA5BC3D225F67FA00D05F6A /* MachHostProcessorCPULoadInfo.swift */,
 			);
 			path = Processor;
+			sourceTree = "<group>";
+		};
+		7EA5BC43225F692700D05F6A /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				7EA5BC47225F693900D05F6A /* MachTaskInfo.swift */,
+				7EA5BC44225F692700D05F6A /* MachTaskInfoBasicInfo.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		7EA5BC4A225F69C500D05F6A /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				7EA5BC4E225F69D800D05F6A /* MachTaskThread.swift */,
+				7EA5BC4B225F69C500D05F6A /* MachTaskThreadBasicInfo.swift */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,12 +467,14 @@
 				7EA5BC3E225F67FA00D05F6A /* MachHostProcessorCPULoadInfo.swift in Sources */,
 				02ECFC5E225C7DE900E7046D /* MachTask.swift in Sources */,
 				02CB1CCC225C5ECB00FD0AF0 /* MachCPUTick.swift in Sources */,
+				7EA5BC4F225F69D800D05F6A /* MachTaskThread.swift in Sources */,
 				02CB1CC9225C5ECB00FD0AF0 /* Mach.swift in Sources */,
-				02CB1CCB225C5ECB00FD0AF0 /* MachTaskThreadBasicInfo.swift in Sources */,
 				7EA5BC30225F585C00D05F6A /* MachHostStatistics.swift in Sources */,
+				7EA5BC48225F693900D05F6A /* MachTaskInfo.swift in Sources */,
 				02CB1CCD225C5ECB00FD0AF0 /* TimeInterval+Mach-Swift.swift in Sources */,
-				02CB1CCA225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift in Sources */,
 				7EA5BC3A225F671900D05F6A /* MachHostInfo.swift in Sources */,
+				7EA5BC4C225F69C500D05F6A /* MachTaskThreadBasicInfo.swift in Sources */,
+				7EA5BC45225F692700D05F6A /* MachTaskInfoBasicInfo.swift in Sources */,
 				7EA5BC2D225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */,
 				02ECFC5C225C7D6000E7046D /* MachHost.swift in Sources */,
 				7EA5BC41225F682300D05F6A /* MachHostProcessor.swift in Sources */,
@@ -471,13 +497,15 @@
 			files = (
 				7EA5BC3F225F67FA00D05F6A /* MachHostProcessorCPULoadInfo.swift in Sources */,
 				02ECFC81225C843800E7046D /* MachHost.swift in Sources */,
-				02ECFC88225C845200E7046D /* MachTaskThreadBasicInfo.swift in Sources */,
 				02ECFC80225C843500E7046D /* MachCPUTick.swift in Sources */,
-				02ECFC87225C844F00E7046D /* MachTaskBasicInfo.swift in Sources */,
+				7EA5BC50225F69D800D05F6A /* MachTaskThread.swift in Sources */,
 				7EA5BC31225F585C00D05F6A /* MachHostStatistics.swift in Sources */,
 				02ECFC7F225C843200E7046D /* Mach.swift in Sources */,
+				7EA5BC49225F693900D05F6A /* MachTaskInfo.swift in Sources */,
 				02ECFC7D225C842800E7046D /* TimeInterval+Mach-Swift.swift in Sources */,
 				7EA5BC2E225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */,
+				7EA5BC4D225F69C500D05F6A /* MachTaskThreadBasicInfo.swift in Sources */,
+				7EA5BC46225F692700D05F6A /* MachTaskInfoBasicInfo.swift in Sources */,
 				7EA5BC3B225F671900D05F6A /* MachHostInfo.swift in Sources */,
 				02ECFC86225C844B00E7046D /* MachTask.swift in Sources */,
 				7EA5BC42225F682300D05F6A /* MachHostProcessor.swift in Sources */,

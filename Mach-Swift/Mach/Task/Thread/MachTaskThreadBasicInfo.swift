@@ -8,20 +8,20 @@
 
 import Foundation
 
-extension Mach.Task {
+extension Mach.Task.Thread {
 	
-	public typealias ThreadState = Int32
-	public static let ThreadStateRunning = TH_STATE_RUNNING	// thread is running normally
-	public static let ThreadStateStopped = TH_STATE_STOPPED	// thread is stopped
-	public static let ThreadStateWaiting = TH_STATE_WAITING	// thread is waiting normally
-	public static let ThreadStateUninterruptible = TH_STATE_UNINTERRUPTIBLE	// thread is in an uninterruptible wait
-	public static let ThreadStateHalted = TH_STATE_HALTED		// thread is halted at a clean point
+	public typealias State = Int32
+	public static let stateRunning = TH_STATE_RUNNING	// thread is running normally
+	public static let stateStopped = TH_STATE_STOPPED	// thread is stopped
+	public static let stateWaiting = TH_STATE_WAITING	// thread is waiting normally
+	public static let stateUninterruptible = TH_STATE_UNINTERRUPTIBLE	// thread is in an uninterruptible wait
+	public static let stateHalted = TH_STATE_HALTED		// thread is halted at a clean point
 	
-	public struct ThreadFlag: OptionSet {
+	public struct Flag: OptionSet {
 		public let rawValue: Int32
-		public static let swapped = ThreadFlag(rawValue: TH_FLAGS_SWAPPED)	// thread is swapped out
-		public static let idle = ThreadFlag(rawValue: TH_FLAGS_IDLE)		// thread is an idle thread
-		public static let globalForcedIdle = ThreadFlag(rawValue: TH_FLAGS_GLOBAL_FORCED_IDLE)	// thread performs global forced idle
+		public static let swapped = Flag(rawValue: TH_FLAGS_SWAPPED)	// thread is swapped out
+		public static let idle = Flag(rawValue: TH_FLAGS_IDLE)		// thread is an idle thread
+		public static let globalForcedIdle = Flag(rawValue: TH_FLAGS_GLOBAL_FORCED_IDLE)	// thread performs global forced idle
 		
 		public init(rawValue: Int32) {
 			self.rawValue = rawValue
@@ -29,13 +29,13 @@ extension Mach.Task {
 	}
 	
 	/// Task's thread basic info.
-	public struct ThreadBasicInfo {
+	public struct BasicInfo {
 		public let userTime: TimeInterval		// user run time
 		public let systemTime: TimeInterval		// system run time
 		public let cpuUsage: Int				// scaled cpu usage percentage
 		public let policy: Int					// scheduling policy in effect
-		public let runState: ThreadState		// run state
-		public let flags: ThreadFlag			// various flags
+		public let runState: State		// run state
+		public let flags: Flag			// various flags
 		public let suspendCount: Int			// suspend count for thread
 		public let sleepTime: TimeInterval		// number of seconds that thread has been sleeping
 	}
@@ -43,14 +43,14 @@ extension Mach.Task {
 }
 
 
-extension Mach.Task.ThreadBasicInfo {
+extension Mach.Task.Thread.BasicInfo {
 	
 	public init() {
 		userTime = 0
 		systemTime = 0
 		cpuUsage = 0
 		policy = 0
-		runState = Mach.Task.ThreadStateStopped
+		runState = Mach.Task.Thread.stateStopped
 		flags = .idle
 		suspendCount = 0
 		sleepTime = 0
@@ -59,7 +59,7 @@ extension Mach.Task.ThreadBasicInfo {
 }
 
 
-extension Mach.Task {
+extension Mach.Task.Thread {
 	
 	/// The function return an array of task's thread basic info.
 	/// This is wrapping the following function.
@@ -68,26 +68,26 @@ extension Mach.Task {
 	/// - thread_info()
 	///
 	/// - Returns: An array of task's thread basic info.
-	public static func threadBasicInfo() -> [ThreadBasicInfo] {
+	public static func basicInfoArray() -> [BasicInfo] {
 		var actList: thread_act_array_t?
 		var actListCount: mach_msg_type_number_t = 0
 		guard KERN_SUCCESS == task_threads(mach_task_self_, &actList, &actListCount) else {
-			return [ThreadBasicInfo]()
+			return [BasicInfo]()
 		}
 		
 		do {
 			guard actListCount > 0 else {
-				return [ThreadBasicInfo]()
+				return [BasicInfo]()
 			}
 			guard let actList = actList else {
-				return [ThreadBasicInfo]()
+				return [BasicInfo]()
 			}
 			defer {
 				vm_deallocate(mach_task_self_, vm_address_t(actList.pointee), vm_size_t(actListCount))
 			}
 			
 			
-			var array = [ThreadBasicInfo]()
+			var array = [BasicInfo]()
 			for i in 0..<actListCount {
 				var machData = thread_basic_info()
 				var count = UInt32(THREAD_INFO_MAX)
@@ -98,16 +98,16 @@ extension Mach.Task {
 					}
 				}
 				guard machRes == KERN_SUCCESS else {
-					return [ThreadBasicInfo]()
+					return [BasicInfo]()
 				}
 				
-				let info = ThreadBasicInfo(
+				let info = BasicInfo(
 					userTime: TimeInterval(machData.user_time),
 					systemTime: TimeInterval(machData.system_time),
 					cpuUsage: Int(machData.cpu_usage),
 					policy: Int(machData.policy),
-					runState: ThreadState(machData.run_state),
-					flags: ThreadFlag(rawValue: machData.flags),
+					runState: State(machData.run_state),
+					flags: Flag(rawValue: machData.flags),
 					suspendCount: Int(machData.suspend_count),
 					sleepTime: TimeInterval(machData.sleep_time)
 				)
@@ -119,12 +119,12 @@ extension Mach.Task {
 		}
 	}
 	
-	public static func threadBasicInfoIsIdle(_ threadBasicInfo: ThreadBasicInfo) -> Bool {
-		if threadBasicInfo.flags.contains(ThreadFlag.idle) {
+	public static func basicInfoIsIdle(_ basicInfo: BasicInfo) -> Bool {
+		if basicInfo.flags.contains(Flag.idle) {
 			return true
 		}
 		
-		if threadBasicInfo.flags.contains(ThreadFlag.globalForcedIdle) {
+		if basicInfo.flags.contains(Flag.globalForcedIdle) {
 			return true 
 		}
 		
