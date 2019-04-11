@@ -53,7 +53,7 @@ extension Mach.Host {
 	/// The function return host's basic info.
 	/// This is wrapping the following function.
 	///
-	/// - host_statistics(, HOST_BASIC_INFO, , )
+	/// - host_info(HOST_BASIC_INFO)
 	///
 	/// - Returns: Host's basic info.
 	public static func basicInfo() -> BasicInfo {

@@ -38,7 +38,7 @@ extension Mach.Host {
 	/// The function return host's virtual memory statistics.
 	/// This is wrapping the following function.
 	///
-	/// - host_statistics(, HOST_VM_INFO, , )
+	/// - host_statistics(HOST_VM_INFO)
 	/// 
 	/// - Returns: Host's virtual memory statistics.
 	public static func vmStatistics() -> VMStatistics {

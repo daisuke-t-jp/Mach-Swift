@@ -166,8 +166,8 @@
 			children = (
 				02ECFC5B225C7D6000E7046D /* MachHost.swift */,
 				02CB1CBB225C5ECB00FD0AF0 /* MachHostVMStatics.swift */,
-				02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */,
 				02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */,
+				02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */,
 				02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */,
 			);
 			path = Host;

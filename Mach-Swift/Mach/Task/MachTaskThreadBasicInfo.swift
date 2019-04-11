@@ -65,7 +65,7 @@ extension Mach.Task {
 	/// This is wrapping the following function.
 	///
 	/// - task_threads()
-	/// - thread_basic_info()
+	/// - thread_info()
 	///
 	/// - Returns: An array of task's thread basic info.
 	public static func threadBasicInfo() -> [ThreadBasicInfo] {

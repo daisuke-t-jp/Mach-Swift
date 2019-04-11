@@ -13,7 +13,7 @@ extension Mach.Host {
 	/// The function return host's cpu load info.
 	/// This is wrapping the following function.
 	///
-	/// - host_statistics(, HOST_CPU_LOAD_INFO, , )
+	/// - host_statistics(HOST_CPU_LOAD_INFO)
 	///
 	/// - Returns: Host's cpu load info.
 	public static func cpuLoadInfo() -> Mach.CPUTick {
