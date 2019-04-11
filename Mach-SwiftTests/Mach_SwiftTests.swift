@@ -20,9 +20,9 @@ class Mach_SwiftTests: XCTestCase {
     }
 
 	
-	// MARK: - Mach.Host
-	func testMachHostVMStatistics() {
-		let val = Mach.Host.vmStatistics()
+	// MARK: - Mach.Host.Statistics
+	func testMachHostStatistics() {
+		let val = Mach.Host.Statistics.vmInfo()
 		
 		XCTAssertFalse(val.freeSize == 0 &&
 			val.activeSize == 0 &&
