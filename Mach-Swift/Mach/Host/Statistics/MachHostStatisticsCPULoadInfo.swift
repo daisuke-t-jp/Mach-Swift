@@ -1,5 +1,5 @@
 //
-//  MachHostCPULoadInfo.swift
+//  MachHostStatisticsCPULoadInfo.swift
 //  Mach-Swift
 //
 //  Created by Daisuke T on 2019/03/14.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension Mach.Host {
-	
+extension Mach.Host.Statistics {
+
 	/// The function return host's cpu load info.
 	/// This is wrapping the following function.
 	///

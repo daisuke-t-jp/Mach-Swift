@@ -30,6 +30,15 @@ class Mach_SwiftTests: XCTestCase {
 			val.wireSize == 0)
 	}
 	
+	func testMachHostStatisticsCPULoadInfo() {
+		let val = Mach.Host.Statistics.cpuLoadInfo()
+		
+		XCTAssertFalse(val.userTick == 0 &&
+			val.systemTick == 0 &&
+			val.idleTick == 0 &&
+			val.niceTick == 0)
+	}
+	
 	func testMachHostBasicInfo() {
 		let val = Mach.Host.basicInfo()
 		
@@ -44,15 +53,6 @@ class Mach_SwiftTests: XCTestCase {
 			val.logicalCPU == 0 &&
 			val.logicalCPUMax == 0 &&
 			val.maxMem == 0)
-	}
-	
-	func testMachHostCPULoadInfo() {
-		let val = Mach.Host.cpuLoadInfo()
-		
-		XCTAssertFalse(val.userTick == 0 &&
-			val.systemTick == 0 &&
-			val.idleTick == 0 &&
-			val.niceTick == 0)
 	}
 	
 	func testMachHostProcessorInfo() {

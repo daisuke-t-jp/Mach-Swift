@@ -11,7 +11,6 @@
 		02CB1C98225C55B600FD0AF0 /* Mach_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */; };
 		02CB1C9A225C55B600FD0AF0 /* Mach_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CB1C8C225C55B600FD0AF0 /* Mach_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02CB1CC5225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */; };
-		02CB1CC6225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */; };
 		02CB1CC8225C5ECB00FD0AF0 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */; };
 		02CB1CC9225C5ECB00FD0AF0 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */; };
 		02CB1CCA225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */; };
@@ -27,7 +26,6 @@
 		02ECFC80225C843500E7046D /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CC1225C5ECB00FD0AF0 /* MachCPUTick.swift */; };
 		02ECFC81225C843800E7046D /* MachHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5B225C7D6000E7046D /* MachHost.swift */; };
 		02ECFC82225C843B00E7046D /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */; };
-		02ECFC83225C843E00E7046D /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */; };
 		02ECFC85225C844300E7046D /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */; };
 		02ECFC86225C844B00E7046D /* MachTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECFC5D225C7DE900E7046D /* MachTask.swift */; };
 		02ECFC87225C844F00E7046D /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */; };
@@ -37,6 +35,8 @@
 		7EA5BC2E225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC2C225F583600D05F6A /* MachHostStatisticsVMInfo.swift */; };
 		7EA5BC30225F585C00D05F6A /* MachHostStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC2F225F585C00D05F6A /* MachHostStatistics.swift */; };
 		7EA5BC31225F585C00D05F6A /* MachHostStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC2F225F585C00D05F6A /* MachHostStatistics.swift */; };
+		7EA5BC33225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC32225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift */; };
+		7EA5BC34225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5BC32225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		02CB1C97225C55B600FD0AF0 /* Mach_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach_SwiftTests.swift; sourceTree = "<group>"; };
 		02CB1C99225C55B600FD0AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
-		02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
 		02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
 		02CB1CBD225C5ECB00FD0AF0 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
 		02CB1CBF225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		02ECFC6C225C823800E7046D /* Mach-Swift-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mach-Swift-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA5BC2C225F583600D05F6A /* MachHostStatisticsVMInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostStatisticsVMInfo.swift; sourceTree = "<group>"; };
 		7EA5BC2F225F585C00D05F6A /* MachHostStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHostStatistics.swift; sourceTree = "<group>"; };
+		7EA5BC32225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostStatisticsCPULoadInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,6 @@
 			children = (
 				02ECFC5B225C7D6000E7046D /* MachHost.swift */,
 				7EA5BC2B225F583600D05F6A /* Statistics */,
-				02CB1CBA225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift */,
 				02CB1CBC225C5ECB00FD0AF0 /* MachHostBasicInfo.swift */,
 				02CB1CB9225C5ECB00FD0AF0 /* MachHostProcessorInfo.swift */,
 			);
@@ -199,6 +198,7 @@
 			children = (
 				7EA5BC2F225F585C00D05F6A /* MachHostStatistics.swift */,
 				7EA5BC2C225F583600D05F6A /* MachHostStatisticsVMInfo.swift */,
+				7EA5BC32225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -426,8 +426,8 @@
 				02CB1CCA225C5ECB00FD0AF0 /* MachTaskBasicInfo.swift in Sources */,
 				7EA5BC2D225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */,
 				02ECFC5C225C7D6000E7046D /* MachHost.swift in Sources */,
-				02CB1CC6225C5ECB00FD0AF0 /* MachHostCPULoadInfo.swift in Sources */,
 				02CB1CC8225C5ECB00FD0AF0 /* MachHostBasicInfo.swift in Sources */,
+				7EA5BC33225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,9 +452,9 @@
 				02ECFC7F225C843200E7046D /* Mach.swift in Sources */,
 				02ECFC7D225C842800E7046D /* TimeInterval+Mach-Swift.swift in Sources */,
 				7EA5BC2E225F583600D05F6A /* MachHostStatisticsVMInfo.swift in Sources */,
-				02ECFC83225C843E00E7046D /* MachHostCPULoadInfo.swift in Sources */,
 				02ECFC82225C843B00E7046D /* MachHostProcessorInfo.swift in Sources */,
 				02ECFC86225C844B00E7046D /* MachTask.swift in Sources */,
+				7EA5BC34225F5B0F00D05F6A /* MachHostStatisticsCPULoadInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
