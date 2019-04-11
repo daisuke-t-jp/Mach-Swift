@@ -60,7 +60,7 @@ class Mach_SwiftTests: XCTestCase {
 	
 	// MARK: - Mach.Host.Processor
 	func testMachHostProcessorInfo() {
-		let array = Mach.Host.Processor.cpuLoadInfo()
+		let array = Mach.Host.Processor.cpuLoadInfoArray()
 		
 		XCTAssertNotEqual(array.count, 0)
 		

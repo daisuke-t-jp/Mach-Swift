@@ -10,13 +10,13 @@ import Foundation
 
 extension Mach.Host.Processor {
 	
-	/// The function return host's processor info.
+	/// The function return an array of host's processor info.
 	/// This is wrapping the following function.
 	///
 	/// - host_processor_info()
 	///
-	/// - Returns: Host's processor info.
-	public static func cpuLoadInfo() -> [Mach.CPUTick] {
+	/// - Returns: An array of host's processor info.
+	public static func cpuLoadInfoArray() -> [Mach.CPUTick] {
 		var cpuCount: natural_t = 0
 		var cpuInfoArray: processor_info_array_t?
 		var cpuInfoCount: mach_msg_type_number_t = 0
