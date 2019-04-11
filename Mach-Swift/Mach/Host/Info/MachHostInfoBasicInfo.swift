@@ -1,5 +1,5 @@
 //
-//  MachHostBasicInfo.swift
+//  MachHostInfoBasicInfo.swift
 //  Mach-Swift
 //
 //  Created by Daisuke T on 2019/03/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Mach.Host {
+extension Mach.Host.Info {
 	
 	/// Host's basic info.
 	public struct BasicInfo {
@@ -28,7 +28,7 @@ extension Mach.Host {
 }
 
 
-extension Mach.Host.BasicInfo {
+extension Mach.Host.Info.BasicInfo {
 	
 	public init() {
 		maxCPUs = 0
@@ -48,7 +48,7 @@ extension Mach.Host.BasicInfo {
 }
 
 
-extension Mach.Host {
+extension Mach.Host.Info {
 
 	/// The function return host's basic info.
 	/// This is wrapping the following function.

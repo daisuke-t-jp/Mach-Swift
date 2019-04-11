@@ -39,8 +39,10 @@ class Mach_SwiftTests: XCTestCase {
 			val.niceTick == 0)
 	}
 	
-	func testMachHostBasicInfo() {
-		let val = Mach.Host.basicInfo()
+	
+	// MARK: - Mach.Host.Info
+	func testMachHostInfoBasicInfo() {
+		let val = Mach.Host.Info.basicInfo()
 		
 		XCTAssertFalse(val.maxCPUs == 0 &&
 			val.availCPUs == 0 &&
