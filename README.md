@@ -14,19 +14,18 @@ The framework wrapped Mach functions in Swift.
 It provides the following information.  
 
 - Host
-    - [x] Virtual Memory Statistics
-        - Wrapped [host_statistics(HOST_VM_INFO)](https://developer.apple.com/documentation/kernel/1502546-host_statistics?language=objc)
-    - [x] Basic Info
-        - Wrapped [host_statistics(HOST_BASIC_INFO)](https://developer.apple.com/documentation/kernel/1502546-host_statistics?language=objc)
-    - [x] CPU Load Info
-        - Wrapped [host_statistics(HOST_CPU_LOAD_INFO)](https://developer.apple.com/documentation/kernel/1502546-host_statistics?language=objc)
-    - [x] Processor Info
-        - Wrapped [host_processor_info()](https://developer.apple.com/documentation/kernel/1502854-host_processor_info?language=objc)
+    - Statistics
+        - [x] Virtual Memory Statistics / Wrapped [host_statistics(HOST_VM_INFO)](https://developer.apple.com/documentation/kernel/1502546-host_statistics?language=objc)
+        - [x] CPU Load Info / Wrapped [host_statistics(HOST_CPU_LOAD_INFO)](https://developer.apple.com/documentation/kernel/1502546-host_statistics?language=objc)
+    - Info
+        - [x] Basic Info / Wrapped [host_info(HOST_BASIC_INFO)](https://developer.apple.com/documentation/kernel/1502514-host_info?language=objc)
+    - Processor
+        - [x] CPU Load Info / Wrapped [host_processor_info()](https://developer.apple.com/documentation/kernel/1502854-host_processor_info?language=objc)
 - Task
-    - [x] Basic Info
-        - Wrapped [task_info()](https://developer.apple.com/documentation/kernel/1537934-task_info?language=objc)
-    - [x] Thread Basic Info
-        - Wrapped [task_threads()](https://developer.apple.com/documentation/kernel/1537751-task_threads?language=objc), [thread_info()](https://developer.apple.com/documentation/kernel/1418630-thread_info?language=objc)
+    - Info
+        - [x] Basic Info / Wrapped [task_info()](https://developer.apple.com/documentation/kernel/1537934-task_info?language=objc)
+    - Thread
+        - [x] Basic Info / Wrapped [task_threads()](https://developer.apple.com/documentation/kernel/1537751-task_threads?language=objc), [thread_info()](https://developer.apple.com/documentation/kernel/1418630-thread_info?language=objc)
 
 ## Requirements
 - Platforms
@@ -57,87 +56,232 @@ end
 import Mach_Swift
 ```
 
-### Getting Host Information
-
+### Getting Information
+#### Code
 ```swift
-print("# Host")
-
-let vm = Mach.Host.vmStatistics()
-print("## VMStatistics")
-print("- freeSize: \(vm.freeSize)")		// byte size of free
-print("- activeSize: \(vm.activeSize)")		// byte size of active
-print("- inactiveSize: \(vm.inactiveSize)")	// byte size of inactive
-print("- wireSize: \(vm.wireSize)")		// byte size of wire
-print("")
-
-let basicInfo = Mach.Host.basicInfo()
-print("## BasicInfo")
-print("- maxCPUs: \(basicInfo.maxCPUs)")
-print("- availCPUs: \(basicInfo.availCPUs)")
-print("- memorySize: \(basicInfo.memorySize)")	// byte size
-print("- cpuType: \(basicInfo.cpuType)")
-print("- cpuSubType: \(basicInfo.cpuSubType)")
-print("- cpuThreadType: \(basicInfo.cpuThreadType)")
-print("- physicalCPU: \(basicInfo.physicalCPU)")
-print("- physicalCPUMax: \(basicInfo.physicalCPUMax)")
-print("- logicalCPU: \(basicInfo.logicalCPU)")
-print("- logicalCPUMax: \(basicInfo.logicalCPUMax)")
-print("- maxMem: \(basicInfo.maxMem)")	// byte size
-print("")
-
-let cpuLoadInfo = Mach.Host.cpuLoadInfo()
-print("## CPULoadInfo")
-print("- userTick: \(cpuLoadInfo.userTick)")
-print("- systemTick: \(cpuLoadInfo.systemTick)")
-print("- idleTick: \(cpuLoadInfo.idleTick)")
-print("- niceTick: \(cpuLoadInfo.niceTick)")
-print("")
-
-let processorInfo = Mach.Host.processorInfo()
-print("## ProcessorInfo")
-for i in 0..<processorInfo.count {
-	let cpu = processorInfo[i]
-	print("- Core No.\(i)")
-	print("    - userTick: \(cpu.userTick)")
-	print("    - systemTick: \(cpu.systemTick)")
-	print("    - idleTick: \(cpu.idleTick)")
-	print("    - niceTick: \(cpu.niceTick)")
+do {
+	print("# Mach")
+	
+	print("## Host")
+	print("### Statistics")
+	print("#### VMInfo")
+	let vm = Mach.Host.Statistics.vmInfo()
+	print("- freeSize: \(vm.freeSize)")	// byte size of free
+	print("- activeSize: \(vm.activeSize)")// byte size of active
+	print("- inactiveSize: \(vm.inactiveSize)")	// byte size of inactive
+	print("- wireSize: \(vm.wireSize)")	// byte size of wire
 	print("")
+
+	print("#### CPULoadInfo")
+	let cpuLoadInfo = Mach.Host.Statistics.cpuLoadInfo()
+	print("- userTick: \(cpuLoadInfo.userTick)")
+	print("- systemTick: \(cpuLoadInfo.systemTick)")
+	print("- idleTick: \(cpuLoadInfo.idleTick)")
+	print("- niceTick: \(cpuLoadInfo.niceTick)")
+	print("")
+	
+	print("### Info")
+	print("#### BasicInfo")
+	let basicInfo = Mach.Host.Info.basicInfo()
+	print("- maxCPUs: \(basicInfo.maxCPUs)")
+	print("- availCPUs: \(basicInfo.availCPUs)")
+	print("- memorySize: \(basicInfo.memorySize)")	// byte size
+	print("- cpuType: \(basicInfo.cpuType)")
+	print("- cpuSubType: \(basicInfo.cpuSubType)")
+	print("- cpuThreadType: \(basicInfo.cpuThreadType)")
+	print("- physicalCPU: \(basicInfo.physicalCPU)")
+	print("- physicalCPUMax: \(basicInfo.physicalCPUMax)")
+	print("- logicalCPU: \(basicInfo.logicalCPU)")
+	print("- logicalCPUMax: \(basicInfo.logicalCPUMax)")
+	print("- maxMem: \(basicInfo.maxMem)")	// byte size
+	print("")
+	
+	print("### Processor")
+	print("#### CPULoadInfo")
+	let array = Mach.Host.Processor.cpuLoadInfoArray()
+	for i in 0..<array.count {
+		let cpu = array[i]
+		print("- Core No.\(i)")
+		print("    - userTick: \(cpu.userTick)")
+		print("    - systemTick: \(cpu.systemTick)")
+		print("    - idleTick: \(cpu.idleTick)")
+		print("    - niceTick: \(cpu.niceTick)")
+		print("")
+	}
+}
+
+print("")
+
+
+do {
+	print("## Task")
+	print("### Info")
+	print("#### BasicInfo")
+	let basicInfo = Mach.Task.Info.basicInfo()
+	print("- virtualSize: \(basicInfo.virtualSize)")
+	print("- residentSize: \(basicInfo.residentSize)")
+	print("- residentSizeMax: \(basicInfo.residentSizeMax)")
+	print("- userTime: \(basicInfo.userTime)")
+	print("- systemTime: \(basicInfo.systemTime)")
+	print("- policy: \(basicInfo.policy)")
+	print("- suspendCount: \(basicInfo.suspendCount)")
+	print("")
+	
+	print("#### ThreadBasicInfo")
+	let array = Mach.Task.Thread.basicInfoArray()
+	for i in 0..<array.count {
+		let thread = array[i]
+		print("- Thread No.\(i)")
+		print(String.init(format:"    - userTime: %.2f", thread.userTime))
+		print(String.init(format:"    - systemTime: %.2f", thread.systemTime))
+		print("    - cpuUsage: \(thread.cpuUsage)")
+		print("    - policy: \(thread.policy)")
+		print("    - runState: \(thread.runState)")
+		print("    - flags: \(thread.flags)")
+		print("    - suspendCount: \(thread.suspendCount)")
+		print("    - sleepTime: \(thread.sleepTime)")
+		print(String.init(format:"    - sleepTime: %.2f", thread.sleepTime))
+		print("")
+	}
 }
 ```
 
-### Getting Task Information
+#### Outout
+```
+# Mach
+## Host
+### Statistics
+#### VMInfo
+- freeSize: 130482176
+- activeSize: 1765789696
+- inactiveSize: 1649594368
+- wireSize: 2495418368
 
-```swift
-print("# Task")
+#### CPULoadInfo
+- userTick: 785470
+- systemTick: 503253
+- idleTick: 4632473
+- niceTick: 0
 
-let basicInfo = Mach.Task.basicInfo()
-print("## BasicInfo")
-print("- virtualSize: \(basicInfo.virtualSize)")
-print("- residentSize: \(basicInfo.residentSize)")
-print("- residentSizeMax: \(basicInfo.residentSizeMax)")
-print("- userTime: \(basicInfo.userTime)")
-print("- systemTime: \(basicInfo.systemTime)")
-print("- policy: \(basicInfo.policy)")
-print("- suspendCount: \(basicInfo.suspendCount)")
-print("")
+### Info
+#### BasicInfo
+- maxCPUs: 4
+- availCPUs: 4
+- memorySize: 2147483648
+- cpuType: 7
+- cpuSubType: 8
+- cpuThreadType: 1
+- physicalCPU: 2
+- physicalCPUMax: 2
+- logicalCPU: 4
+- logicalCPUMax: 4
+- maxMem: 8589934592
 
-let threadBasicInfo = Mach.Task.threadBasicInfo()
-print("## ThreadBasicInfo")
-for i in 0..<threadBasicInfo.count {
-	let thread = threadBasicInfo[i]
-	print("- Thread No.\(i)")
-	print(String.init(format:"    - userTime: %.2f", thread.userTime))
-	print(String.init(format:"    - systemTime: %.2f", thread.systemTime))
-	print("    - cpuUsage: \(thread.cpuUsage)")
-	print("    - policy: \(thread.policy)")
-	print("    - runState: \(thread.runState)")
-	print("    - flags: \(thread.flags)")
-	print("    - suspendCount: \(thread.suspendCount)")
-	print("    - sleepTime: \(thread.sleepTime)")
-	print(String.init(format:"    - sleepTime: %.2f", thread.sleepTime))
-	print("")
-}
+### Processor
+#### CPULoadInfo
+- Core No.0
+    - userTick: 257206
+    - systemTick: 186605
+    - idleTick: 1036690
+    - niceTick: 0
+
+- Core No.1
+    - userTick: 144763
+    - systemTick: 87848
+    - idleTick: 1247622
+    - niceTick: 0
+
+- Core No.2
+    - userTick: 251769
+    - systemTick: 155100
+    - idleTick: 1073364
+    - niceTick: 0
+
+- Core No.3
+    - userTick: 131732
+    - systemTick: 73700
+    - idleTick: 1274800
+    - niceTick: 0
+
+
+## Task
+### Info
+#### BasicInfo
+- virtualSize: 5425922048
+- residentSize: 78155776
+- residentSizeMax: 78155776
+- userTime: 0.000426
+- systemTime: 0.003031
+- policy: 1
+- suspendCount: 0
+
+#### ThreadBasicInfo
+- Thread No.0
+    - userTime: 0.24
+    - systemTime: 0.93
+    - cpuUsage: 626
+    - policy: 1
+    - runState: 1
+    - flags: Flag(rawValue: 0)
+    - suspendCount: 0
+    - sleepTime: 0.0
+    - sleepTime: 0.00
+
+- Thread No.1
+    - userTime: 0.01
+    - systemTime: 0.01
+    - cpuUsage: 23
+    - policy: 1
+    - runState: 3
+    - flags: Flag(rawValue: 1)
+    - suspendCount: 0
+    - sleepTime: 0.0
+    - sleepTime: 0.00
+
+- Thread No.2
+    - userTime: 0.00
+    - systemTime: 0.00
+    - cpuUsage: 6
+    - policy: 1
+    - runState: 3
+    - flags: Flag(rawValue: 1)
+    - suspendCount: 0
+    - sleepTime: 0.0
+    - sleepTime: 0.00
+
+- Thread No.3
+    - userTime: 0.00
+    - systemTime: 0.00
+    - cpuUsage: 0
+    - policy: 1
+    - runState: 3
+    - flags: Flag(rawValue: 1)
+    - suspendCount: 0
+    - sleepTime: 0.0
+    - sleepTime: 0.00
+
+- Thread No.4
+    - userTime: 0.00
+    - systemTime: 0.00
+    - cpuUsage: 4
+    - policy: 1
+    - runState: 3
+    - flags: Flag(rawValue: 1)
+    - suspendCount: 0
+    - sleepTime: 0.0
+    - sleepTime: 0.00
+
+- Thread No.5
+    - userTime: 0.00
+    - systemTime: 0.01
+    - cpuUsage: 12
+    - policy: 1
+    - runState: 3
+    - flags: Flag(rawValue: 1)
+    - suspendCount: 0
+    - sleepTime: 0.0
+    - sleepTime: 0.00
+
 ```
 
 
