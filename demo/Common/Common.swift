@@ -20,7 +20,7 @@ public class Common {
 			print("- activeSize: \(vm.activeSize)")		// byte size of active
 			print("- inactiveSize: \(vm.inactiveSize)")	// byte size of inactive
 			print("- wireSize: \(vm.wireSize)")			// byte size of wire
-			print("\n")
+			print("")
 
 			let basicInfo = Mach.Host.basicInfo()
 			print("## BasicInfo")
@@ -35,7 +35,7 @@ public class Common {
 			print("- logicalCPU: \(basicInfo.logicalCPU)")
 			print("- logicalCPUMax: \(basicInfo.logicalCPUMax)")
 			print("- maxMem: \(basicInfo.maxMem)")	// byte size
-			print("\n")
+			print("")
 
 			let cpuLoadInfo = Mach.Host.cpuLoadInfo()
 			print("## CPULoadInfo")
@@ -43,7 +43,7 @@ public class Common {
 			print("- systemTick: \(cpuLoadInfo.systemTick)")
 			print("- idleTick: \(cpuLoadInfo.idleTick)")
 			print("- niceTick: \(cpuLoadInfo.niceTick)")
-			print("\n")
+			print("")
 
 			let processorInfo = Mach.Host.processorInfo()
 			print("## ProcessorInfo")
@@ -54,11 +54,11 @@ public class Common {
 				print("    - systemTick: \(cpu.systemTick)")
 				print("    - idleTick: \(cpu.idleTick)")
 				print("    - niceTick: \(cpu.niceTick)")
-				print("\n")
+				print("")
 			}
 		}
 		
-		print("\n")
+		print("")
 		
 		do {
 			print("# Task")
@@ -72,7 +72,7 @@ public class Common {
 			print("- systemTime: \(basicInfo.systemTime)")
 			print("- policy: \(basicInfo.policy)")
 			print("- suspendCount: \(basicInfo.suspendCount)")
-			print("\n")
+			print("")
 
 			let threadBasicInfo = Mach.Task.threadBasicInfo()
 			print("## ThreadBasicInfo")
@@ -88,7 +88,7 @@ public class Common {
 				print("    - suspendCount: \(thread.suspendCount)")
 				print("    - sleepTime: \(thread.sleepTime)")
 				print(String.init(format:"    - sleepTime: %.2f", thread.sleepTime))
-				print("\n")
+				print("")
 			}
 		}
 	}
