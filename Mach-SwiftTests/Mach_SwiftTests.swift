@@ -57,8 +57,10 @@ class Mach_SwiftTests: XCTestCase {
 			val.maxMem == 0)
 	}
 	
+	
+	// MARK: - Mach.Host.Processor
 	func testMachHostProcessorInfo() {
-		let array = Mach.Host.processorInfo()
+		let array = Mach.Host.Processor.cpuLoadInfo()
 		
 		XCTAssertNotEqual(array.count, 0)
 		
