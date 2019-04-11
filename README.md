@@ -26,7 +26,7 @@ It provides the following information.
     - [x] Basic Info
         - Wrapped [task_info()](https://developer.apple.com/documentation/kernel/1537934-task_info?language=objc)
     - [x] Thread Basic Info
-        - Wrapped [task_threads()](https://developer.apple.com/documentation/kernel/1537751-task_threads?language=objc), [thread_basic_info()](https://developer.apple.com/documentation/kernel/1418630-thread_info?language=objc)
+        - Wrapped [task_threads()](https://developer.apple.com/documentation/kernel/1537751-task_threads?language=objc), [thread_info()](https://developer.apple.com/documentation/kernel/1418630-thread_info?language=objc)
 
 ## Requirements
 - Platforms
