@@ -12,18 +12,29 @@ import Mach_Swift
 public class Common {
 	public static func machTest() {
 		do {
-			print("# Host")
-
-			let vm = Mach.Host.vmStatistics()
-			print("## VMStatistics")
+			print("# Mach")
+			
+			print("## Host")
+			print("### Statistics")
+			print("#### VMInfo")
+			let vm = Mach.Host.Statistics.vmInfo()
 			print("- freeSize: \(vm.freeSize)")			// byte size of free
 			print("- activeSize: \(vm.activeSize)")		// byte size of active
 			print("- inactiveSize: \(vm.inactiveSize)")	// byte size of inactive
 			print("- wireSize: \(vm.wireSize)")			// byte size of wire
 			print("")
 
-			let basicInfo = Mach.Host.basicInfo()
-			print("## BasicInfo")
+			print("#### CPULoadInfo")
+			let cpuLoadInfo = Mach.Host.Statistics.cpuLoadInfo()
+			print("- userTick: \(cpuLoadInfo.userTick)")
+			print("- systemTick: \(cpuLoadInfo.systemTick)")
+			print("- idleTick: \(cpuLoadInfo.idleTick)")
+			print("- niceTick: \(cpuLoadInfo.niceTick)")
+			print("")
+			
+			print("### Info")
+			print("#### BasicInfo")
+			let basicInfo = Mach.Host.Info.basicInfo()
 			print("- maxCPUs: \(basicInfo.maxCPUs)")
 			print("- availCPUs: \(basicInfo.availCPUs)")
 			print("- memorySize: \(basicInfo.memorySize)")	// byte size
@@ -36,19 +47,12 @@ public class Common {
 			print("- logicalCPUMax: \(basicInfo.logicalCPUMax)")
 			print("- maxMem: \(basicInfo.maxMem)")	// byte size
 			print("")
-
-			let cpuLoadInfo = Mach.Host.cpuLoadInfo()
-			print("## CPULoadInfo")
-			print("- userTick: \(cpuLoadInfo.userTick)")
-			print("- systemTick: \(cpuLoadInfo.systemTick)")
-			print("- idleTick: \(cpuLoadInfo.idleTick)")
-			print("- niceTick: \(cpuLoadInfo.niceTick)")
-			print("")
-
-			let processorInfo = Mach.Host.processorInfo()
-			print("## ProcessorInfo")
-			for i in 0..<processorInfo.count {
-				let cpu = processorInfo[i]
+			
+			print("### Processor")
+			print("#### CPULoadInfo")
+			let array = Mach.Host.Processor.cpuLoadInfoArray()
+			for i in 0..<array.count {
+				let cpu = array[i]
 				print("- Core No.\(i)")
 				print("    - userTick: \(cpu.userTick)")
 				print("    - systemTick: \(cpu.systemTick)")
@@ -60,11 +64,12 @@ public class Common {
 		
 		print("")
 		
+		
 		do {
-			print("# Task")
-			
-			let basicInfo = Mach.Task.basicInfo()
-			print("## BasicInfo")
+			print("## Task")
+			print("### Info")
+			print("#### BasicInfo")
+			let basicInfo = Mach.Task.Info.basicInfo()
 			print("- virtualSize: \(basicInfo.virtualSize)")
 			print("- residentSize: \(basicInfo.residentSize)")
 			print("- residentSizeMax: \(basicInfo.residentSizeMax)")
@@ -73,11 +78,11 @@ public class Common {
 			print("- policy: \(basicInfo.policy)")
 			print("- suspendCount: \(basicInfo.suspendCount)")
 			print("")
-
-			let threadBasicInfo = Mach.Task.threadBasicInfo()
-			print("## ThreadBasicInfo")
-			for i in 0..<threadBasicInfo.count {
-				let thread = threadBasicInfo[i]
+			
+			print("#### ThreadBasicInfo")
+			let array = Mach.Task.Thread.basicInfoArray()
+			for i in 0..<array.count {
+				let thread = array[i]
 				print("- Thread No.\(i)")
 				print(String.init(format:"    - userTime: %.2f", thread.userTime))
 				print(String.init(format:"    - systemTime: %.2f", thread.systemTime))
