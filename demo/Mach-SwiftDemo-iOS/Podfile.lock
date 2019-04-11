@@ -1,5 +1,5 @@
 PODS:
-  - Mach-Swift (1.0.1)
+  - Mach-Swift (1.0.2)
 
 DEPENDENCIES:
   - Mach-Swift (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Mach-Swift: 5bb58076b968e3592d69204ef93eefd1df183517
+  Mach-Swift: 66922efc52431fda0162a8177a79929a2f6d38e2
 
 PODFILE CHECKSUM: a96bde8c4779b40caad4a8420ac5efaa5a25f47b
 

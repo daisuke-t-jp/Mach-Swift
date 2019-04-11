@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "Mach-Swift"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "You can easily get information from Mach."
 
   spec.description  = <<-DESC
