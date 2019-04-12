@@ -67,7 +67,7 @@ do {
 	print("#### VMInfo")
 	let vm = Mach.Host.Statistics.vmInfo()
 	print("- freeSize: \(vm.freeSize)")	// byte size of free
-	print("- activeSize: \(vm.activeSize)")// byte size of active
+	print("- activeSize: \(vm.activeSize)")	// byte size of active
 	print("- inactiveSize: \(vm.inactiveSize)")	// byte size of inactive
 	print("- wireSize: \(vm.wireSize)")	// byte size of wire
 	print("")
