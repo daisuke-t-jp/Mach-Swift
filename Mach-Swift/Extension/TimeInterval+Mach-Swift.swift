@@ -9,7 +9,7 @@
 import Foundation
 
 extension TimeInterval {
-	init(_ timeValue: time_value_t) {
-		self.init(Double(timeValue.seconds) + (Double(timeValue.microseconds) / Double(USEC_PER_SEC)))
-	}
+  init(_ timeValue: time_value_t) {
+    self.init(Double(timeValue.seconds) + (Double(timeValue.microseconds) / Double(USEC_PER_SEC)))
+  }
 }
