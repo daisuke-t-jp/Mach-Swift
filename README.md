@@ -1,6 +1,5 @@
 <img src="https://raw.githubusercontent.com/daisuke-t-jp/Mach-Swift/master/images/Mach-Swift.png" width="300"></br>
 # Mach-Swift
-------
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20macOS%20-blue.svg)
 [![Language Swift%205.0](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)](https://developer.apple.com/swift)
 [![Build Status](https://travis-ci.org/daisuke-t-jp/Mach-Swift.svg?branch=master)](https://travis-ci.org/daisuke-t-jp/Mach-Swift)
