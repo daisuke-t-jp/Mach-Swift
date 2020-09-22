@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "Mach-Swift"
-  spec.version      = "1.0.3"
+  spec.version      = "1.1.0"
   spec.summary      = "You can easily get information from Mach."
 
   spec.description  = <<-DESC
@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.swift_version = "5.0"
+  spec.swift_version = "5.3"
   spec.requires_arc = true
 
 end

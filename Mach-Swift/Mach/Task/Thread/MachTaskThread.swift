@@ -9,9 +9,8 @@
 import Foundation
 
 extension Mach.Task {
-  
-  public class Thread {
     
-  }
-  
+    public class Thread {
+    }
+    
 }
