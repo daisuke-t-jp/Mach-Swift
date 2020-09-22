@@ -9,9 +9,8 @@
 import Foundation
 
 extension Mach.Task {
-  
-  public class Info {
     
-  }
-  
+    public class Info {
+    }
+    
 }

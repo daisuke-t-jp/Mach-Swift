@@ -9,9 +9,8 @@
 import Foundation
 
 extension Mach.Host {
-  
-  public class Info {
     
-  }
-  
+    public class Info {
+    }
+    
 }
