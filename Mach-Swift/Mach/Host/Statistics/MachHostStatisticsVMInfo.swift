@@ -53,7 +53,7 @@ extension Mach.Host.Statistics {
         var count = mach_msg_type_number_t(MemoryLayout<vm_statistics_data_t>.stride / MemoryLayout<integer_t>.stride)
         
         let machRes = withUnsafeMutablePointer(to: &machData) {
-            $0.withMemoryRebound(to: integer_t.self, capacity: Int(count)) {
+            $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
                 host_statistics(port, HOST_VM_INFO, $0, &count)
             }
         }
