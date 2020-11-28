@@ -21,7 +21,7 @@ extension Mach.Host.Statistics {
         var count = mach_msg_type_number_t(MemoryLayout<host_cpu_load_info>.stride / MemoryLayout<integer_t>.stride)
         
         let machRes = withUnsafeMutablePointer(to: &machData) {
-            $0.withMemoryRebound(to: integer_t.self, capacity: Int(count)) {
+            $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
                 host_statistics(mach_host_self(), HOST_CPU_LOAD_INFO, $0, &count)
             }
         }

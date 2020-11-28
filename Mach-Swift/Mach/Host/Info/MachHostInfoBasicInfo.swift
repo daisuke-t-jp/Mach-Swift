@@ -62,7 +62,7 @@ extension Mach.Host.Info {
         var count = mach_msg_type_number_t(MemoryLayout<host_basic_info>.stride / MemoryLayout<integer_t>.stride)
         
         let machRes = withUnsafeMutablePointer(to: &machData) {
-            $0.withMemoryRebound(to: integer_t.self, capacity: Int(count)) {
+            $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
                 host_info(mach_host_self(), HOST_BASIC_INFO, $0, &count)
             }
         }
