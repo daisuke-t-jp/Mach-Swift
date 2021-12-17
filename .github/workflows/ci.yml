@@ -1,0 +1,23 @@
+name: ci
+
+on: 
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - '*'
+
+jobs:
+  testing_macos:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@v1
+    - name: "Xcode13 iOS"
+      run:  xcodebuild clean test -project Mach-Swift.xcodeproj -scheme Mach-Swift-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.0,name=iPhone 8" -configuration Debug
+      env:
+        DEVELOPER_DIR: /Applications/Xcode_13.0.app/Contents/Developer
+    - name: "Xcode13 macOS"
+      run: xcodebuild clean test -project Mach-Swift.xcodeproj -scheme Mach-Swift-macOS -destination "platform=OS X" -configuration Debug
+      env:
+        DEVELOPER_DIR: /Applications/Xcode_13.0.app/Contents/Developer
