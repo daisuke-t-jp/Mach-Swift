@@ -2,7 +2,7 @@
 # Mach-Swift
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20macOS%20-blue.svg)
 [![Language Swift%205.0](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)](https://developer.apple.com/swift)
-[![Build Status](https://travis-ci.org/daisuke-t-jp/Mach-Swift.svg?branch=master)](https://travis-ci.org/daisuke-t-jp/Mach-Swift)
+![Build Status](https://github.com/daisuke-t-jp/Mach-Swift/actions/workflows/ci.yml/badge.svg)
 [![Cocoapods](https://img.shields.io/cocoapods/v/Mach-Swift.svg)](https://cocoapods.org/pods/Mach-Swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 
